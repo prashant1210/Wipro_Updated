@@ -1,0 +1,20 @@
+<div class="table-responsive">
+    <table class="table table-bordered" *ngIf="training && training.length">
+      <thead>
+        <tr class="bg-primary">
+          <th>Name</th>
+          <th>StartDate</th>
+          <th>EndDate</th>         
+          <th>Actions</th>         
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let objTraining of training"> 
+          <td>{{ objTraining.Name }}</td>
+          <td>{{ objTraining.StartDate }}</td>
+          <td>{{ objTraining.EndDate }}</td>
+          <td> <button class="btn btn-primary"(click)="editButtonClick(objTraining.id)">Edit</button> </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
